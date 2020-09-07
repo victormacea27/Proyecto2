@@ -138,7 +138,7 @@ function subirGifo() {
     //Pantalla de carga de gif
     overlayCargando.style.display = "flex";
     btnSubirGifo.style.display = "none";
-    //REllenar pasos
+    //Rellenar pasos
     pasoActivo[1].classList.remove('paso-activo');
     pasoActivo[2].classList.add('paso-activo');
     repetirCaptura.style.display = "none";
@@ -153,12 +153,11 @@ function subirGifo() {
             return response.json();
         })
 
-        //6: gifo subido con exito: cambia icono y texto del overlay, aparecen los botones para descargar o link
+        //Mostrar mensaje de cargue de gif
         .then(objeto => {
             console.log(objeto);
 
             let miGifId = objeto.data.id;
-
             //Subida del gif
             accionesCargando.style.display = "block";
             iconoCargando.setAttribute("src", "./assets/check.svg");
@@ -172,20 +171,16 @@ function subirGifo() {
                 </button>
                 `;
 
-            //si en el local storage no hay nada, el array queda vacio
             if (misGifosString == null) {
                 misGifosArray = [];
 
             } else {
-                //si tengo contenido, necesito parsearlo para agregar uno nuevo
+                //Agregar a mis gifos
                 misGifosArray = JSON.parse(misGifosString);
             }
-
             misGifosArray.push(miGifId);
-            //vuelvo a pasar a texto el array para subirlo al LS
             misGifosString = JSON.stringify(misGifosArray);
             localStorage.setItem("misGifos", misGifosString);
-
         })
 
         .catch(error => console.log("error al subir gif a GIPHY" + error))
@@ -197,39 +192,30 @@ async function descargarGifCreado(gifImg) {
     invokeSaveAsDialog(blob, "migifo.gif");
 }
 
-//- repetir captura: funcion grabar
-repetirCaptura.addEventListener('click', repetirGifo);
+//Repetir captura
+repetirCaptura.addEventListener('click', repetirCapturaGifo);
 
-function repetirGifo() {
+function repetirCapturaGifo() {
     recorder.clearRecordedData();
     console.log("re-grabando gif");
-
+    //Ocultar repetir captura
     repetirCaptura.style.display = "none";
-
-    //sacar boton subir gifo
+    //Ocultar boton subir
     btnSubirGifo.style.display = "none";
-
-    //se va la imagen
+    //Ocultar boton grabando
     gifGrabado.style.display = "none";
-
-    //funciones comenzar gifo pero sin texto
-    //aparece boton grabar gifo
+    //Mostrar grabar
     btnGrabar.style.display = "block";
-
-    //funcion pedir permisos camara
+    //Activar camara
     navigator.mediaDevices.getUserMedia({ audio: false, video: { width: 480, height: 320 } })
-
-        //doy acceso: aparece la camara y el boton GRABAR. paso 2 activo
-        .then(function (mediaStream) {
-
-            //aparece el video
+        .then(function (stream) {
+            //Mostrar video
             videoGif.style.display = "block";
-            videoGif.srcObject = mediaStream;
+            videoGif.srcObject = stream;
             videoGif.onloadedmetadata = function (e) {
                 videoGif.play();
             };
-
-            recorder = RecordRTC(mediaStream, {
+            recorder = RecordRTC(stream, {
                 type: 'gif'
             });
         })
