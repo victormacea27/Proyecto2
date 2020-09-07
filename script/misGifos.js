@@ -33,7 +33,7 @@ function buscarMisGifos() {
             })
     }
 }
-//Pintos gifos exixtentes
+//Pintos gifos existentes
 function mostrarMisGifos(content) {
     let gifosMisGifosArray = content.data;
 
