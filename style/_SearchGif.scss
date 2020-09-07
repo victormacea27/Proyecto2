@@ -1,0 +1,206 @@
+.resultados-busqueda {
+    margin: 38px 10px 53px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.gif-acciones-resultados {
+    position: absolute;
+    z-index: 0;
+    background-color: $color-purple-op;
+    width: 220px;
+    height: 200px;
+}
+.resultados-gif {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+@media screen and (min-width: 375px) {
+main .resultadoBuscador{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-family: $Fuente-Montserrat;
+        font-size: 25px;
+        color: $color-purple;
+        text-align: center;
+        line-height: 40px;
+        margin-bottom: 38px;
+    }
+    .buscados{
+        margin: 38px 10px 53px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .resultados-busqueda {
+        margin: 38px 10px 53px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .resultados-gif-box {
+        width: 156px;
+        height: 120px;
+        overflow: hidden;
+        margin: 0 10px 25px 10px;
+    }
+    .gif-acciones-resultados {
+        display: none;
+    }
+    .iconos-acciones-gif {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .iconos-acciones-box {
+        width: 32px;
+        height: 32px;
+        background-color: $Color-White-op;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        border-radius: 6px;
+        border: none;
+    }
+    .favorito {
+        cursor: pointer;
+    }
+    .download {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .max {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .iconos-acciones-box:hover {
+        background-color: $Color-White;
+    }
+    .textos-descripcion-gif-resultados {
+        position: absolute;
+        bottom: 30px;
+        left: 18px;
+    }
+    .user-gif-resultados {
+        font-family: $Fuente-Roboto;
+        font-weight: 300;
+        text-align: left;
+        color: $Color-White;
+        font-size: 15px;
+        line-height: 18px;
+        padding: 0;
+        margin-bottom: 6px;
+    }
+
+    .titulo-gif-resultados {
+        font-family: $Fuente-Roboto;
+        text-align: left;
+        color: $Color-White;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+    }
+
+    .resultados-gif-box:hover .gif-acciones-resultados {
+        display: block;
+    }
+
+    .vermas {
+        display: none;
+        padding-top: 71px;
+        padding-bottom: 25px;
+        .boton {
+            color: $color-purple;
+            background-color: $Color-White;
+            border: none;
+            border: 1px solid $color-purple;
+            border-radius: 25px;
+            width: 127px;
+            height: 50px;
+            font-family: $Fuente-Montserrat;
+            font-size: 13px;
+            letter-spacing: 0;
+            text-align: center;
+            font-weight: 700;
+            &:hover{
+                color: $Color-White; 
+                background-color: $color-purple;  
+            }
+        }
+    }
+
+} 
+}  
+@media screen and (min-width: 1200px) {
+    main .resultadoBuscador{
+width: 100%;
+align-items: initial;
+        h2{
+            width: 550px;
+            height: 30px;
+            font-family: $Fuente-Montserrat;
+            font-size: 35px;
+            color: $color-purple;
+            text-align: center;
+            line-height: 30px;
+            margin-bottom: 60px;
+            margin-top: 81.9px;
+            margin-left: 445px;
+        }
+        .buscados{
+            margin: 38px 10px 53px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            #titulo-busqueda {
+                padding-top: 81px;
+                font-size: 35px;
+                line-height: 30px;
+            }
+            .resultados-busqueda {
+                margin: 59px 146px 47px 146px;
+            }
+            .resultados-gif-box {
+                width: 260px;
+                height: 200px;
+                margin: 0 15px 31px 15px;
+            }
+            .gif-acciones-resultados {
+                width: 260px;
+                height: 200px;
+            }
+        }
+        .vermas {
+            display: none;
+            padding-top: 71px;
+            padding-bottom: 25px;
+            margin-left: 657px;
+            .boton {
+                color: $color-purple;
+                background-color: $Color-White;
+                border: none;
+                border: 1px solid $color-purple;
+                border-radius: 25px;
+                width: 127px;
+                height: 50px;
+                font-family: $Fuente-Montserrat;
+                font-size: 13px;
+                letter-spacing: 0;
+                text-align: center;
+                font-weight: 700;
+            }
+        }
+    
+    }
+}

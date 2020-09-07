@@ -1,0 +1,219 @@
+@import 'variables';
+@import 'header';
+@import 'trending';
+@import 'body';
+@import 'footer';
+main{
+    .misGifos {
+        display: inline-block;
+        .titulo{
+            margin-top: 5px;
+            #iconocara{
+                padding-left: 176px;
+            }
+            h1{
+                width: 375px;
+                font-family: $Fuente-Montserrat;
+                font-size: 20px;
+                color: $color-purple;
+                line-height: 30px;
+                text-align: center;
+            }
+        }
+        .misGif{
+            margin-top: 60px;
+            text-align: center;
+            .gifContenido{
+                margin-bottom: 20px;
+            }
+            h2{
+                color: $color-green-blue;
+                font-family: $Fuente-Montserrat;
+                font-size: 22px;
+                text-align: center;
+                line-height: 33px;
+            }
+        }
+    }
+}
+
+#misgifos-vacio {
+    text-align: center;
+    margin-top: 40px;
+    display: none;
+    img {
+        width: 120px;
+    }
+
+    h2 {
+        font-family: $Fuente-Montserrat;
+        color: $color-purple;
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 15px;
+        padding: 0 21px;
+    }
+}
+#misgifos-creados {
+    margin-top: 20px;
+    text-align: center;
+}
+.resultados-misgifos {
+    margin: 38px 10px 53px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.resultados-gif-box-misgifos {
+    width: 156px;
+    height: 120px;
+    overflow: hidden;
+    margin: 0 10px 25px 10px;
+}
+.resultados-gif-box-misgifos .resultados-gif{
+    width: 100%;
+    height: 100%;
+}
+
+.gif-acciones-resultados-misgifos {
+    display: none;
+}
+@media screen and (min-width: 1024px) {
+    main{
+        .misGifos {
+            display: inline-block;
+            width: 100%;
+            .titulo{
+                margin-top: 11px;
+                #iconocara{
+                    padding-left: 706px;
+                    margin-bottom: 8px;
+                }
+                h1{
+                    margin-left: 445px;
+                    font-family: $Fuente-Montserrat;
+                    font-size: 25px;
+                    line-height: 30px;
+                    width: 549px;
+                    height: 30px;
+                    text-align: center;
+                    padding-left: 0;
+                    
+                }
+            }
+            .misGif{
+                text-align: left;
+                margin-top: 111px;
+
+                .gifContenido{
+                    margin-bottom: 40px;
+                }
+                h2{
+                    width: 431px;
+                    height: 66;
+                    justify-content: center;
+                    margin-left: 504.5px;
+                }
+            }
+        }
+    }
+    .tendenciasGif{
+        margin-top: 136px;
+        margin-bottom: 47.4px;
+    }
+
+    #misgifos-vacio {
+        margin-top: 110px;
+        margin-bottom: 136px;
+
+        img {
+            width: 150px;
+        }
+
+        h2 {
+            font-size: 22px;
+            line-height: 33px;
+            margin-top: 24px;
+            padding: 0 50px;
+        }
+    }
+    .resultados-misgifos {
+        margin: 38px 10px 53px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .resultados-gif-box-misgifos {
+        width: 220px;
+        height: 200px;
+        margin: 0 10px 25px 10px;
+    }
+    .gif-acciones-resultados-misgifos {
+        position: absolute;
+        z-index: 0;
+        background-color: $color-purple-op;
+        width: 220px;
+        height: 200px;
+    }
+    .iconos-acciones-gif {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .iconos-acciones-box {
+        width: 32px;
+        height: 32px;
+        background-color: $Color-White-op;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        border-radius: 6px;
+        border: none;
+    }
+    .borrar {
+        cursor: pointer;
+    }
+    .download {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .max {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .iconos-acciones-box:hover {
+        background-color: $Color-White;
+    }
+    .textos-descripcion-gif-misgifos {
+        position: absolute;
+        bottom: 30px;
+        left: 18px;
+    }
+    .user-gif-misgifos {
+        font-family: $Fuente-Roboto;
+        text-align: left;
+        color: $Color-White;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+        padding: 0;
+        margin-bottom: 6px;
+    }
+    .titulo-gif-misgifos {
+        font-family: $Fuente-Roboto;
+        text-align: left;
+        color: $Color-White;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+    }
+    .resultados-gif-box-misgifos:hover .gif-acciones-resultados-misgifos {
+        display: block;
+    }
+}
+

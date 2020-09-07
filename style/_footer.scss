@@ -1,0 +1,86 @@
+footer{
+    border-bottom: 5px solid $color-purple;
+    text-align: center;
+    margin-top: 47px;
+    h3{
+        font-family: $Fuente-Roboto;
+        font-size: 15px;
+        color: $Color-black;
+        letter-spacing: 0;
+    }
+    .redes {
+        padding-top: 22px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        a {
+            padding-left: 19px;
+
+            i {
+                color: $color-redes;
+            }
+        }
+        a:first-child {
+            padding-left: 0;
+        }
+        a:hover {
+            i {
+                color: $color-purple;
+            }
+        }
+    }
+    .copyright {
+        font-size: 14px;
+        font-family: $Fuente-Roboto;
+        color: $Color-black;
+        letter-spacing: 0;
+        line-height: 20px;
+        padding-top: 46px;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 53.4px;
+        margin-top: 49.5px;
+
+        .pie {
+            width: 50%;
+            display: flex;
+            flex-direction: row;   
+            
+            h3{
+                padding-left: 156px;
+                padding-right: 17px;
+            }
+            p {
+                margin: 0;
+                padding: 0;
+                width: 100px;
+                text-align: center;
+            }
+            .redes {
+                padding-top: 0px;
+                padding-left: 0;
+                width: 80px;
+                .fa-twitter{
+                    color: $color-purple;
+                }
+            }
+        }
+        .copyright {
+            padding-top: 0px;
+            padding-right: 158px;
+            font-family: $Fuente-Roboto;
+            font-size: 13px;
+            color: $Color-black;
+            letter-spacing: 0;
+        }
+    }
+}

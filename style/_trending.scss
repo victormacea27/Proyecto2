@@ -1,0 +1,249 @@
+//titulo y subtitulo gifos
+.tendenciasGif {
+    margin-top: 79px;
+    background-color: $color-grey-backg;
+    padding-bottom: 82px;
+
+    h2 {
+        padding-top: 44px;
+        font-family: $Fuente-Montserrat;
+        text-align: center;
+        color: $color-purple;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: bold;
+    }
+
+    #subtituloGifos {
+        width: 333px;
+        font-family: $Fuente-Roboto;
+        font-size: 16px;
+        line-height: 23px;
+        text-align: center;
+        margin: 9px 21px;
+        #gifSubtitulo{
+            display: contents;
+        }
+    }
+
+}
+//Slider
+.slider-prev {
+    display: none;
+}
+.slider-next {
+    display: none;
+}
+.trending-slider {
+    display: flex;
+    margin: 23px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+    height: 187px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+.gif-contenedor {
+    width: 100%;
+    height: 100%;
+    margin: 0 20px;
+    scroll-snap-align: center;
+}
+.gif-acciones {
+    display: none;
+}
+.trending-gif {
+    width: 243px;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (min-width: 376px) {
+    .trending-slider-contenedor {
+        margin: 53px 50px 0 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .slider-prev {
+        display: block;
+        border: 1px solid $color-purple;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .prev-blanco {
+            display: none;
+            width: 8px;
+        }
+    }
+    .slider-prev:hover {
+        background-color: $Color-White;
+
+        .prev-violeta {
+            display: block;
+        }
+
+        .prev-blanco {
+            display: none;
+        }
+    }
+    .slider-next {
+        display: block;
+        border: 1px solid $color-purple;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .next-blanco {
+            display: none;
+            width: 8px;
+        }
+    }
+    .slider-next:hover {
+        background-color: $Color-White;
+        .next-violeta {
+            display: none;
+        }
+        .next-blanco {
+            display: block;
+        }
+    }
+    .trending-slider-box {
+        overflow-x: hidden;
+        width: 795px;
+    }
+    .trending-slider {
+        overflow-x: hidden;
+        transform: translateX(0);
+        margin: 0;
+        padding: 0;
+        width: 3080px;
+        max-width: 3080px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .gif-contenedor {
+        margin: 0 15px;
+        width: 243px;
+        height: 187px;
+    }
+    .gif-contenedor:first-child {
+        margin-left: 0;
+    }
+    .gif-acciones {
+        position: absolute;
+        z-index: 0;
+        background-color: $color-purple-op;
+        width: 243px;
+        height: 187px;
+    }
+    .iconos-acciones-gif {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .iconos-acciones-box {
+        width: 32px;
+        height: 32px;
+        background-color: $Color-White-op;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        border-radius: 6px;
+        border: none;
+        padding-top: 7px;
+    }
+    .favorito {
+        cursor: pointer;
+        color: blue;
+    }
+    .download {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .max {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .iconos-acciones-box:hover {
+        background-color: $Color-White;
+    }
+    .textos-descripcion-gif {
+        text-align: left;
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+    }
+    .user-gif {
+        font-family: $Fuente-Roboto;
+        text-align: left;
+        color: $Color-White;
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 300;
+        padding: 0 10px 0 0;
+        margin-bottom: 6px;
+    }
+    .titulo-gif {
+        font-family: $Fuente-Roboto;
+        text-align: left;
+        color: $Color-White;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        padding: 0 10px 0 0;
+        margin: 0;
+    }
+    .gif-contenedor:hover .gif-acciones {
+        display: block;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .tendenciasGif {
+        padding: 0;
+
+        h2 {
+            padding-top: 78px;
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: bold;
+        }
+        #subtituloGifos {
+            width: 100%;
+            font-size: 18px;
+            padding: 14px 0 0 0;
+            span{
+                display: none;
+            }
+        }
+    }
+    .trending-slider-contenedor {
+        margin: 53px 94px 0 94px;
+        padding-bottom: 182px;
+    }
+    .trending-slider-box {
+        width: 1133px;
+    }
+    .trending-slider {
+        height: 275px;
+    }
+    .gif-contenedor {
+        width: 357px;
+        height: 275px;
+    }
+    .gif-acciones {
+        width: 357px;
+        height: 275px;
+    }
+    .textos-descripcion-gif {
+        bottom: 51px;
+        left: 18.5px;
+    }
+    .trending-gif {
+        width: 357px;
+    }
+}

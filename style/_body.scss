@@ -1,0 +1,187 @@
+//modo oscuro
+.dark{ 
+    background-color: $color-dark; 
+    color: $Color-White; 
+    header{
+        border-top: 5px solid $Color-black;
+            background-color: $color-dark;
+        nav .menu ul li a{
+            color: $Color-White;
+            #nocturno{
+                display: none;
+            }
+            #diurno{
+                display: initial;
+            }
+        }
+        nav .menu ul{
+            background-color: $Color-black;
+            #mas{
+                background-color: $Color-White;
+                border : none;
+                &:hover{
+                    background-color: $color-grey;
+                }
+            }
+        }
+    }
+    main{
+        .buscador {
+            h1{
+            color: $Color-White;
+            }
+        } 
+        .buscar{
+            border: 1px solid $Color-White;
+            .contenedorUno{
+                input{
+                background-color: $color-dark;
+                color: $Color-White;
+                }
+            }
+            button{
+                background-color: $color-dark;
+                #lupa{
+                    background-color: $color-dark;
+                }
+                #cerrar{
+                    background-color: $color-dark;
+                }
+            }
+        }
+        .resultadoBuscador{
+            h2{
+                color: $Color-White;
+            }
+        }
+        .tendencias{
+            h2 {
+                color: $Color-White;
+            }
+            h4{
+                color: $Color-White;
+            }
+        }
+        .tendenciasGif{
+            background-color:$Color-black;
+            h2 {
+                color: $Color-White;
+            }
+            p{
+                color: $Color-White;
+            }
+        }
+        .favoritos .titulo #titulo-Favorito{
+            color: $Color-White;
+        }
+        #titulo-misgifos{
+            color: $Color-White;
+        }
+    }
+    footer{
+        border-bottom: 5px solid $Color-black;
+        .pie{
+            h3{
+                color: $Color-White;
+            }
+            .redes .fa-twitter{
+                color: $color-redes;
+            }
+        }
+        .copyright{
+            color: $Color-White;
+        }  
+    }
+    @media screen and (min-width: 1200px) {
+        header nav .menu ul{
+            background: $color-dark;
+        }
+    };
+}
+
+//Ventana full gif
+.modal-activado {
+    position: fixed;
+    padding: 0 20px;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: $Color-White-op;
+    .modal-btn-close{
+        background-color: unset;
+        border: 0;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 50px;
+        right: 20px;
+    }
+    .modal-gif{
+        width: 100%;
+        margin-top: 124px;
+    }
+    .modal-bar{
+        display: flex;
+        justify-content: space-between;
+        margin: 17px 0;
+        .modal-textos{
+            max-width: 65%;
+
+            .modal-user{
+                text-align: left;
+                font-size: 15px;
+                line-height: 18px;
+                font-weight: 300;
+                margin: 0;
+                color: $Color-black;
+                font-family: $Fuente-Roboto;
+            }
+            .modal-titulo{
+                text-align: left;
+                font-size: 16px;
+                line-height: 19px;
+                font-weight: 500;
+                margin-top: 6px;
+                color: $Color-black;
+                font-family: $Fuente-Montserrat;
+            }
+        }
+        .modal-btn{
+            background-color: unset;
+            border: 0;
+            width: 36px;
+            height: 36px;
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .modal-activado {
+        padding: unset;
+        text-align: center;
+    }
+    .modal-btn-close{
+        top: 50px;
+        right: 100px !important;
+        cursor: pointer;
+    }
+    .modal-gif{
+        max-width: 600px;
+        margin-top: 160px;
+    }
+    .modal-bar{
+        margin: 27px auto !important;
+        max-width: 600px;
+        position: relative;
+        .modal-textos{
+            max-width: 80%;
+        }
+        .modal-btn{
+            border: 1px solid $color-grey;
+            cursor: pointer;
+        }
+    }
+}

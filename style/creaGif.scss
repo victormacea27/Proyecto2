@@ -1,0 +1,298 @@
+@import 'variables';
+@import 'header';
+@import 'body';
+@import 'footer';
+@media screen and (min-width: 1200px) {
+    .main-creargifo {
+        .ilus-grabar-contenedor {
+            display: flex;
+            margin: 4px 50px 0px 370px;
+            justify-content: center;
+            .div-camara {
+                width: 162px;
+                height: 390px;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                #camara-ilustracion {
+                    width: 90px;
+                }
+                #luz-camara {
+                    width: 60px;
+                    padding-top: 5px;
+                    padding-left: 3px;
+                }
+            }
+            .div-grabacion {
+                .recuadro-grabacion {
+                    width: 600px;
+                    height: 390px;
+                    border: 1px solid $color-purple;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .esquina1 {
+                        border-top: 1px solid $color-green-blue;
+                        border-left: 1px solid $color-green-blue;
+                        width: 25px;
+                        height: 27px;
+                        position: absolute;
+                        top: 20px;
+                        left: 20px;
+                    }
+                    .esquina2 {
+                        border-top: 1px solid $color-green-blue;
+                        border-right: 1px solid $color-green-blue;
+                        width: 25px;
+                        height: 27px;
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                    }
+                    .esquina3 {
+                        border-bottom: 1px solid $color-green-blue;
+                        border-left: 1px solid $color-green-blue;
+                        width: 25px;
+                        height: 27px;
+                        position: absolute;
+                        bottom: 20px;
+                        left: 20px;
+                    }
+                    .esquina4 {
+                        border-bottom: 1px solid $color-green-blue;
+                        border-right: 1px solid $color-green-blue;
+                        width: 25px;
+                        height: 27px;
+                        position: absolute;
+                        bottom: 20px;
+                        right: 20px;
+                    }
+                    .video-contenedor {
+                        width: 480px;
+                        height: 320px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        #titulo-grabargifo {
+                            font-family: $Fuente-Montserrat;
+                            font-weight: 500;
+                            text-align: center;
+                            color: $color-purple;
+                            font-size: 25px;
+                            line-height: 35px;
+                            margin: 0 0 3px 0;
+                            .gifos-crear {
+                                color: $color-green-blue;
+                            }
+                        }
+                        #texto-grabargifo {
+                            font-family: $Fuente-Roboto;
+                            font-weight: 300;
+                            font-size: 16px;
+                            line-height: 23px;
+                            text-align: center;
+                            color: $Color-black;
+                            font-size: 16px;
+                            line-height: 29px;
+                            margin: 0;
+                        }
+                        .overlay-video {
+                            display: none;
+                            width: 100%;
+                            height: 100%;
+                            background-color: $color-purple;
+                            text-align: center;
+                            position: absolute;
+                            z-index: 5;
+                            #overlay-video-actions {
+                                display: none;
+                                position: absolute;
+                                top: 12px;
+                                right: 12px;
+                                #btn-creargifo-descargar {
+                                    position: absolute;
+                                    top: 0;
+                                    right: 42px;
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 6px;
+                                    border: none;
+                                    background-color: $Color-White;
+                                    margin: 0;
+                                    cursor: pointer;
+                                }
+                                #btn-creargifo-descargar:hover {
+                                    background-color: $Color-White;
+                                }
+                                #btn-creargifo-link {
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 6px;
+                                    border: none;
+                                    background-color: $Color-White;
+                                    margin: 0;
+                                    cursor: pointer;
+                                }
+                                #btn-creargifo-link:hover {
+                                    background-color: $Color-White;
+                                }
+                            }
+                            #overlay-video-textos {
+                                display: flex;
+                                flex-direction: column;
+
+                                #overlay-video-icon {
+                                    margin: 0;
+                                }
+                                #overlay-video-parrafo {
+                                    font-family: $Fuente-Montserrat;
+                                    font-weight: 500;
+                                    font-size: 15px;
+                                    line-height: 19px;
+                                    color: $Color-White;
+                                    margin: 10px 0;
+                                }
+                            }
+                        }
+                        #grabacion-video {
+                            display: none;
+                            position: absolute;
+                            z-index: 1;
+                        }
+                        #gif-grabado {
+                            display: none;
+                            width: 480px;
+                            height: 320px;
+                            position: absolute;
+                            z-index: 2;
+                        }
+                    }
+                }
+                div {
+                    height: 75px;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    .crear-pasos {
+                        margin-top: 24px;
+                        p {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 50%;
+                            border: 1px solid $color-purple;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 25px;
+
+                            font-family: $Fuente-Roboto;
+                            font-weight: 300;
+                            font-size: 18px;
+                            line-height: 21px;
+                            color: $color-purple;
+                        }
+                        .paso-activo {
+                            background-color: $color-purple;
+                            color: $Color-White;
+                        }
+                        p:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                    .contador-contenedor {
+                        position: absolute;
+                        right: 0;
+                        #contador-grabacion {
+                            display: none;
+                            font-family: $Fuente-Montserrat;
+                            font-weight: 500;
+                            text-align: center;
+                            font-size: 15px;
+                            line-height: 22px;
+                            color: $color-purple;
+                        }
+                        #contador-repetircaptura {
+                            display: none;
+                            font-family: 'Montserrat', sans-serif;
+                            font-weight: 500;
+                            text-align: center;
+                            color: $color-purple;
+                            font-size: 13px;
+                            line-height: 16px;
+                            text-transform: uppercase;
+                            background-color: unset;
+                            border: none;
+                            border-bottom: 2px solid $Color-White;
+                            cursor: pointer;
+                        }
+                        #contador-repetircaptura:hover {
+                            border-bottom: 2px solid $color-green-blue;
+                        }
+                    }
+                }
+            }
+            .div-pelicula {
+                width: 162px;
+                height: 465px;
+                position: relative;
+                img {
+                    width: 100px;
+                    position: absolute;
+                    bottom: 0;
+                    margin-left: 60px;
+                }
+            }
+        }
+        .divisor-creargifo {
+            height: 7px;
+            width: 650px;
+            border-radius: 50px;
+            background-color: $color-purple;
+            margin: 0 auto 20px;
+        }
+        .botones-creargifo-contenedor {
+            text-align: center;
+            .btn-generico{
+                color: $color-purple;
+                background-color: unset;
+                border: 1px solid $color-purple;
+                border-radius: 25px;
+                padding: 16px 32px;
+                cursor: pointer;
+                font-family: $Fuente-Montserrat;
+                font-size: 13px;
+                line-height: 16px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            #btn-creargifo-comenzar {
+                font-weight: 600;
+                margin: 0 auto 26px;
+
+            }
+            #btn-creargifo-grabar {
+                display: none;
+                font-weight: 600;
+                margin: 0 auto 26px;
+            }
+            #btn-creargifo-finalizar {
+                display: none;
+                font-weight: 600;
+                margin: 0 auto 26px;
+            }
+            #btn-creargifo-subirgifo {
+                display: none;
+                font-weight: 600;
+                margin: 0 auto 26px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap"
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ed9a51d47c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/logo-mobile.svg" id="logoMobil" alt="logo Mobil"></a>
+        <a href="index.html"><img src="assets/logo-desktop.svg" id="logoDesktop" alt="logo Desktop"></a>
+        <nav>
+            <div class="menu">
+            <input type="checkbox" name="check" id="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul>
+                <li><a href="#"  id="modo"><p id="nocturno">Modo nocturno</p><p id="diurno">Modo diurno</p></a></li>
+                <li><span></span></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+                <li><span></span></li>
+                <li><a href="misgifos.html">Mis GIFOS</a></li>
+                <li><span></span></li>
+                <li ><a href="crearGif.html" id="mas"><img src="./assets/button-crear-gifo.svg" alt="Crear Gif"></a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+    <main>
+        <section class="buscador" >
+            <h1>Inspírate, busca, guarda, y crea los mejores<span> GIFOS</span></h1>
+            <img id="personas" src="./assets/ilustra_header.svg" alt="img personas">
+            <div class="buscar" id="Marco">
+                <div class="contenedorUno">
+                    <input type="text" name="busqueda" id="busqueda" placeholder="Busca GIFOS y más">
+                    <ul id="gifEncontrados" class="listadoGifs">  
+                    </ul>
+                </div>
+                <button type="button" id="botonBuscar" ><img src="./assets/icon-search.svg" alt="icon-search" id="lupa"><img src="./assets/close.svg" alt="Cerrar" id="cerrar"></button>
+            </div>
+            <div class="tendencias" id="tendencia"> 
+            </div>
+        </section>
+        <section class="resultadoBuscador" id="resultadoBuscador">
+            <h2 id="tituloBusqueda"></h2>
+            <div id="contenidoBuscador" class="buscados">  
+            </div>
+            <div class="vermas">
+                <button class="boton">VER MÁS</button>
+            </div>
+        </section>
+        <section class="tendenciasGif">
+            <h2>Trending GIFOS</h2>
+            <p id="subtituloGifos">Mira los ultimos <span><br></span> GIFO<span id="gifSubtitulo">S</span> de nuestra comunidad.</p>
+            <div class="trending-slider-contenedor">
+
+                <div class="slider-prev" id="trending-btn-previous">
+                    <img src="./assets/button-left.svg" alt="izquierda" class="prev-violeta">
+                    <img src="./assets/button-left.svg" alt="izquierda" class="prev-blanco">
+                </div>
+
+                <div class="trending-slider-box">
+                    <div class="trending-slider" id="trending-slider">
+                    </div>
+                </div>
+
+                <div class="slider-next" id="trending-btn-next">
+                    <img src="./assets/button-right.svg" alt="derecha" class="next-violeta">
+                    <img src="./assets/button-right.svg" alt="derecha" class="next-blanco">
+                </div>
+
+            </div>     
+        </section>
+    </main>
+    <footer>
+        <div class="pie">
+            <h3>Compartir en:</h3>
+            <div class="redes">
+                <a href="https://es-la.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p class="copyright">© GIFOS 2020 All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="./script/dark.js"></script>
+    <script src="./script/trending.js"></script>
+    <script src="./script/search.js"></script>
+    <script src="./script/trendingGif.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+</body>
+</html>
