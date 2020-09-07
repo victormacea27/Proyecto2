@@ -289,7 +289,8 @@ main .buscador .tendencias {
         text-align: initial;
         margin-left: 675.5px; }
       main .buscador .tendencias h4 {
-        width: 100%; } }
+        width: 100%;
+        margin-left: 0; } }
 .tendenciasGif {
   margin-top: 79px;
   background-color: #F3F5F8;
