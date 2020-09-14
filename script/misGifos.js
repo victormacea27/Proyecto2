@@ -8,8 +8,6 @@ let pantallaMisGifos = document.getElementById('resultados-misgifos');
 let modalMobileMG = document.createElement("div");
 let modalDesktopMG = document.createElement("div");
 
-let blob;
-
 //buscar gifos si exiten
 buscarMisGifos();
 function buscarMisGifos() {
