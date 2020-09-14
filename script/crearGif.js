@@ -157,16 +157,17 @@ function subirGifo() {
             console.log("datos objeto"+ objeto);
             console.log(objeto);
             let miGifId = objeto.data.id;
+            console.log(miGifId);
             //Subida del gif
             accionesCargando.style.display = "block";
             iconoCargando.setAttribute("src", "./assets/check.svg");
             textoCargando.innerText = "GIFO subido con éxito";
             overlayActions.innerHTML = `
-                <button class="overlay-video-button" id="btn-creargifo-descargar" onclick="descargarGifCreado('${miGifId}')">
+                <button class="overlay-video-button" id="btn-creargifo-descargar" onclick="descargarGifCreado('https://media4.giphy.com/media/${miGifId}/giphy.gif?cid=7876023df4951d710c0d9daa596f5f38d2baa565d9f07cdd&rid=giphy.gif')">
                 <img src="./assets/icon-download.svg" alt="download">
                 </button>
                 <button class="overlay-video-button" id="btn-creargifo-link">
-                <img src="./assets/icon-link.svg" alt="link">
+                <a href='https://media4.giphy.com/media/${miGifId}/giphy.gif?cid=7876023df4951d710c0d9daa596f5f38d2baa565d9f07cdd&rid=giphy.gif' target="_blank"><img src="./assets/icon-link.svg" alt="link"></a>
                 </button>
                 `;
 
@@ -181,7 +182,6 @@ function subirGifo() {
             misGifosString = JSON.stringify(misGifosArray);
             localStorage.setItem("misGifos", misGifosString);
         })
-
         .catch(error => console.log("error al subir gif a GIPHY" + error))
 }
 //Repetir captura
@@ -214,6 +214,7 @@ function repetirCapturaGifo() {
 }
 //Descargar gif
 async function descargarGifCreado(gifImg) {
-    let blob = await fetch(gifImg).then( img => img.blob());
+    let blob = await fetch(gifImg).then( img => img.blob());;
     invokeSaveAsDialog(blob, "migifo.gif");
 }
+
