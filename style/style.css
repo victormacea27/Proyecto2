@@ -192,6 +192,8 @@ main .buscador .buscar {
   padding-right: 20px;
   margin-left: 20px;
   margin-top: -4px; }
+  main .buscador .buscar #botonBuscarDos {
+    display: none; }
   main .buscador .buscar .contenedorUno {
     display: flex; }
     main .buscador .buscar .contenedorUno ul {

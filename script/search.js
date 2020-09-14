@@ -9,7 +9,7 @@ let gifsBuscados = document.getElementById("contenidoBuscador");
 let tituloResultado = document.getElementById("resultadoBuscador");
 let ul = document.getElementById('gifEncontrados');
 
-//Acción Enter
+
 
 //Agregar acción a boton
 textoBuscado.addEventListener("keyup", lista);
@@ -32,7 +32,18 @@ function lista() {
         ul.innerHTML = "";
     }
 }
-
+//Acción al Enter
+document.getElementById("busqueda")
+.addEventListener("keyup", function(event) {
+event.preventDefault();
+if (event.keyCode === 13) {
+    var enlaceDos = event.target.innerHTML;
+    console.log(enlaceDos);
+    console.log("presiono enter "+textoBuscado.value)
+    valorBuscado = textoBuscado.value;
+    buscarGif();
+}
+});
 //Función llenar la lista
 function llenarLista(data) {
     if (textoBuscado.value != null) {
@@ -44,6 +55,11 @@ function llenarLista(data) {
             intro.style.height = '200px';
             let Imglupa = document.getElementById('lupa');
             Imglupa.style.display = 'none';
+            let Imglupagris = document.getElementById('botonBuscarDos');
+            Imglupagris.style.display = 'block';
+            Imglupagris.style.marginBottom = '150px';
+            valorBuscado = textoBuscado.value;
+            Imglupagris.addEventListener("click", buscarGif);
             let ImgCerrar = document.getElementById('cerrar');
             ImgCerrar.style.display = 'initial';
             ImgCerrar.style.marginBottom = '150px';
@@ -93,6 +109,10 @@ function buscarGif(){
         //Limpiar busqueda
         valorBuscado.innerText = "";
         gifsBuscados.innerText = "";
+
+        //Ocultar lupa gris
+        let Imglupagriscerrar = document.getElementById('botonBuscarDos');
+        Imglupagriscerrar.style.display = 'none';
         console.log(valorBuscado);
         //cambiar stylo marco
         if (screen.width > 1200) {
