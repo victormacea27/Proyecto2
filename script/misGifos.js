@@ -8,6 +8,8 @@ let pantallaMisGifos = document.getElementById('resultados-misgifos');
 let modalMobileMG = document.createElement("div");
 let modalDesktopMG = document.createElement("div");
 
+let blob;
+
 //buscar gifos si exiten
 buscarMisGifos();
 function buscarMisGifos() {
@@ -45,7 +47,7 @@ function mostrarMisGifos(content) {
                             <button class="iconos-acciones-box borrar" onclick="borrarGifo('${content.data[i].id}')">
                                 <img src="./assets/icon_trash.svg" alt="icon-borrar">
                             </button>
-                            <button class="iconos-acciones-box download" onclick="descargarGif('${content.data[i].images.downsized.url}', '${content.data[i].slug}')">
+                            <button class="iconos-acciones-box download" onclick="descargarGifMisGifos('${content.data[i].images.downsized.url}', '${content.data[i].slug}')">
                                 <img src="./assets/icon-download.svg" alt="icon-download" >
                             </button>
                             <button class="iconos-acciones-box max" onclick="maxGifDesktopMG('${content.data[i].images.downsized.url}', '${content.data[i].id}', '${content.data[i].slug}', '${content.data[i].username}', '${content.data[i].title}')">
@@ -61,6 +63,12 @@ function mostrarMisGifos(content) {
                 </div>
         `;
     }
+}
+
+//Descargar gifos
+async function descargarGifMisGifos(gifImg, gifNombre) {
+    let blob = await fetch(gifImg).then(img => img.blob());;
+    invokeSaveAsDialog(blob, gifNombre + ".gif");
 }
 
 //Eliminar gif
@@ -94,7 +102,7 @@ function maxGifMobileMG(img, id, slug, user, title) {
         </div>
         <div>
             <button class="modal-btn" onclick="borrarGifo('${id}')"><img src="./assets/icon_trash.svg" alt="delete-gif"></button>
-            <button class="modal-btn" onclick="descargarGif('${img}', '${slug}')"><img src="./assets/icon-download.svg" alt="download-gif"></button>
+            <button class="modal-btn" onclick="descargarGifMisGifos('${img}', '${slug}')"><img src="./assets/icon-download.svg" alt="download-gif"></button>
         </div>
     </div>
     `;
@@ -122,7 +130,7 @@ function maxGifDesktopMG(img, id, slug, user, title) {
         </div>
         <div>
             <button class="modal-btn" onclick="borrarGifo('${id}')"><img src="./assets/icon_trash.svg" alt="delete-gif"></button>
-            <button class="modal-btn" onclick="descargarGif('${img}', '${slug}')"><img src="./assets/icon-download.svg" alt="download-gif"></button>
+            <button class="modal-btn" onclick="descargarGifMisGifos('${img}', '${slug}')"><img src="./assets/icon-download.svg" alt="download-gif"></button>
         </div>
     </div>
     `;
@@ -134,8 +142,3 @@ function maxGifDesktopMG(img, id, slug, user, title) {
 function cerrarModalEscritorioMG() {
     modalDesktopMG.style.display = "none";
 } 
-//Descargar gifos
-async function descargarGif(gifImg, gifNombre) {
-    let blob = await fetch(gifImg).then(img => img.blob());;
-    invokeSaveAsDialog(blob, gifNombre + ".gif");
-}
