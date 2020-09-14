@@ -9,6 +9,7 @@ let gifsBuscados = document.getElementById("contenidoBuscador");
 let tituloResultado = document.getElementById("resultadoBuscador");
 let ul = document.getElementById('gifEncontrados');
 
+//Acción Enter
 
 //Agregar acción a boton
 textoBuscado.addEventListener("keyup", lista);
@@ -208,7 +209,7 @@ function maxGifDesktop(img, id, slug, user, title){
     if (screen.width > 1200){
         modalEscritorio.style.display = "block";
         modalEscritorio.innerHTML = `
-        <button class="modal-btn-close" onclick="cerrarModalEscritorio()"><img src="./assets/button-close.svg" alt=""></button>
+        <button class="modal-btn-close" onclick="cerrarModalEscritorioEncontrados()"><img src="./assets/button-close.svg" alt=""></button>
         <img src="${img}" alt="${id}" class="modal-gif">
 
         <div class="modal-bar">
@@ -227,8 +228,9 @@ function maxGifDesktop(img, id, slug, user, title){
     }
 }
 
-function cerrarModalEscritorio() {
+function cerrarModalEscritorioEncontrados() {
     modalEscritorio.style.display = "none";
+    console.log("boton")
 } 
 
 //Favoritos

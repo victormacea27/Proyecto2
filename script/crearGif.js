@@ -24,6 +24,8 @@ let accionesCargando = document.getElementById('overlay-video-actions');
 let iconoCargando = document.getElementById('overlay-video-icon');
 let textoCargando = document.getElementById('overlay-video-parrafo');
 let overlayActions = document.getElementById('overlay-video-actions');
+let misGifosArray = [];
+let misGifosString = localStorage.getItem("misGifos");
 
 //Camara
 function comenzarCreacionGifo() {
@@ -130,9 +132,6 @@ function finalizarGifo() {
 
 //Subir gifo
 btnSubirGifo.addEventListener('click', subirGifo);
-let misGifosArray = [];
-let misGifosString = localStorage.getItem("misGifos");
-
 function subirGifo() {
 
     //Pantalla de carga de gif
@@ -155,8 +154,8 @@ function subirGifo() {
 
         //Mostrar mensaje de cargue de gif
         .then(objeto => {
+            console.log("datos objeto"+ objeto);
             console.log(objeto);
-
             let miGifId = objeto.data.id;
             //Subida del gif
             accionesCargando.style.display = "block";
@@ -185,13 +184,6 @@ function subirGifo() {
 
         .catch(error => console.log("error al subir gif a GIPHY" + error))
 }
-
-//Descargar gif
-async function descargarGifCreado(gifImg) {
-    let blob = await fetch(gifImg).then( img => img.blob());;
-    invokeSaveAsDialog(blob, "migifo.gif");
-}
-
 //Repetir captura
 repetirCaptura.addEventListener('click', repetirCapturaGifo);
 
@@ -219,4 +211,9 @@ function repetirCapturaGifo() {
                 type: 'gif'
             });
         })
+}
+//Descargar gif
+async function descargarGifCreado(gifImg) {
+    let blob = await fetch(gifImg).then( img => img.blob());
+    invokeSaveAsDialog(blob, "migifo.gif");
 }
